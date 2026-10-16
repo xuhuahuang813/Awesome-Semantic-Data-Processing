@@ -71,7 +71,7 @@ A curated list of research papers on semantic operators, query optimization, exe
 
 ## 4. 基准测试与工作负载（Benchmarks & Workloads）
 
-- [Bench-U / UDABench - Unstructured Data Analysis using LLMs: A Comprehensive Benchmark](https://www.vldb.org/pvldb/vol19/p2398-deng.pdf)（VLDB 2026 Volume 19, Issue 9）
+- [Bench-U / UDABench - Unstructured Data Analysis using LLMs: A Comprehensive Benchmark](https://www.vldb.org/pvldb/vol19/p2398-deng.pdf)（VLDB 2026 Volume 19, Issue 9）[🌐](https://bit-datalab.github.io/bench-u-page/)
 - [LROBench - Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis](https://arxiv.org/abs/2603.02537)（arXiv 2026）
 - [SemBench - SemBench: A Benchmark for Semantic Query Processing Engines](https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf)（PVLDB 2026）
 - [TAG - Text2SQL is Not Enough: Unifying AI and Databases with TAG](https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html)（CIDR 2025）
