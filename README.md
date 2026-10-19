@@ -48,6 +48,7 @@ A curated list of research papers on semantic operators, query optimization, exe
   - [CADENZA in Action - Breaking the Monolith with Intent-Dependent Plan Spaces for Semantic Queries](https://arxiv.org/abs/2607.01468)（VLDB 2026；Demo；基于：CADENZA）
 - [Semantic Views: Certified Reuse of LLM Labels Across Semantic
 Queries](https://arxiv.org/pdf/2610.12768v1) (arXiv 261008)
+- [Demo of SemWeave: Semantic Common Expressions for LLM-powered Query Processing](https://dl.acm.org/doi/epdf/10.1145/3788853.3801593) (SIGMOD 2026 Demo)
 - [SemReuse: Certified Reuse of Cached Natural-Language Views for
 Semantic Operators](https://arxiv.org/pdf/2610.16035v1) (arXiv 261012)
 
