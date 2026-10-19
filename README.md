@@ -46,6 +46,10 @@ A curated list of research papers on semantic operators, query optimization, exe
 - [Galois - Logical and Physical Optimizations for SQL Query Execution over Large Language Models](https://doi.org/10.1145/3725411)（SIGMOD 2025）
 - [CADENZA - Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing](https://arxiv.org/abs/2606.29151)（SIGMOD 2027；Research；已接收）
   - [CADENZA in Action - Breaking the Monolith with Intent-Dependent Plan Spaces for Semantic Queries](https://arxiv.org/abs/2607.01468)（VLDB 2026；Demo；基于：CADENZA）
+- [Semantic Views: Certified Reuse of LLM Labels Across Semantic
+Queries](https://arxiv.org/pdf/2610.12768v1) (arXiv 261008)
+- [SemReuse: Certified Reuse of Cached Natural-Language Views for
+Semantic Operators](https://arxiv.org/pdf/2610.16035v1) (arXiv 261012)
 
 ## 3. 语义算子实现与执行加速（Operator Implementation & Execution）
 
@@ -71,9 +75,10 @@ A curated list of research papers on semantic operators, query optimization, exe
 
 ## 4. 基准测试与工作负载（Benchmarks & Workloads）
 
-- [Bench-U / UDABench - Unstructured Data Analysis using LLMs: A Comprehensive Benchmark](https://www.vldb.org/pvldb/vol19/p2398-deng.pdf)（VLDB 2026 Volume 19, Issue 9）[🌐](https://bit-datalab.github.io/bench-u-page/)
+- [Bench-U / UDABench - Unstructured Data Analysis using LLMs: A Comprehensive Benchmark](https://www.vldb.org/pvldb/vol19/p2398-deng.pdf)（VLDB 2026 Volume 19, Issue 9）[Code](https://bit-datalab.github.io/bench-u-page/)
 - [LROBench - Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis](https://arxiv.org/abs/2603.02537)（arXiv 2026）
-- [SemBench - SemBench: A Benchmark for Semantic Query Processing Engines](https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf)（PVLDB 2026）
+- [SemBench - SemBench: A Benchmark for Semantic Query Processing Engines](https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf)（PVLDB 2026）[Code](https://github.com/SemBench/SemBench/tree/main)[Web](https://sembench.github.io/SemBench/?utm_source=chatgpt.com)
+- [Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing](https://arxiv.org/pdf/2610.13823v1) (arXiv 261009)
 - [TAG - Text2SQL is Not Enough: Unifying AI and Databases with TAG](https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html)（CIDR 2025）
 - [SWAN - Hybrid Querying Over Relational Databases and Large Language Models](https://www.vldb.org/cidrdb/2025/hybrid-querying-over-relational-databases-and-large-language-models.html)（CIDR 2025）
 - [FDABench - FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data](https://fdabench.github.io/)（KDD 2026）
