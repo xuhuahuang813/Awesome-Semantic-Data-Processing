@@ -85,6 +85,8 @@ Semantic Operators](https://arxiv.org/pdf/2610.16035v1) (arXiv 261012)
 - [FDABench - FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data](https://fdabench.github.io/)（KDD 2026）
 - [DAB - Can ai agents answer your data questions? a benchmark for data agents](https://arxiv.org/abs/2603.20576)（arXiv 2026）
 - [SemCEB - SemCEB: A Cardinality Estimation Benchmark for Semantic Operators](https://arxiv.org/abs/2606.23081)（NOVAS @ VLDB 2026）
+- [HyQBench - Automating End-to-End Hybrid Query Processing: Benchmark, Solution, and Insights](https://dl.acm.org/doi/epdf/10.1145/3770855.3817487)（SIGKDD 2026）
+- [AgenticDataBench: A Comprehensive Benchmark for Data Agents](https://arxiv.org/pdf/2607.01647) (VLDB 2027) [Github](https://github.com/AgenticDataBench/AgenticDataBench)
 
 ## 5. 相关系统与基础研究（Related Systems & Foundations）
 
