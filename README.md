@@ -28,6 +28,7 @@ A curated list of research papers on semantic operators, query optimization, exe
 - [OmniTQA - OmniTQA: A Cost-Aware System for Hybrid Query Processing over Semi-Structured Data](https://arxiv.org/abs/2604.02444)（arXiv 2026）
 - [KEN - KEN: An Execution Engine for Unstructured Database Systems](https://www.vldb.org/pvldb/vol19/p902-kossmann.pdf)（PVLDB 2026）
 - [ELEET - ELEET: Efficient Learned Query Execution over Text and Tables](https://www.vldb.org/pvldb/vol17/p4867-urban.pdf)（PVLDB 2024）
+- [NousDB - A Fast Query Engine for Semantic Analytics](https://arxiv.org/pdf/2610.28551v1) (arViv 20261020) (基于Apache DataFusion)
 
 ## 2. 语义查询优化（Semantic Query Optimization）
 
