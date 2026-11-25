@@ -58,6 +58,7 @@ Semantic Operators](https://arxiv.org/pdf/2610.16035v1) (arXiv 261012)
 - [JEVDB - Prune First, Decide Fast: Scalable Semantic Query Processing with JEVDB](https://arxiv.org/abs/2610.02046)（arXiv 2026）
 - [100x Cost & Latency Reduction: Performance Analysis of AI Query Approximation using Lightweight Proxy Models](https://arxiv.org/abs/2603.15970)（SIGMOD 2026）
 - [ScaleDoc - ScaleDoc: Scaling LLM-based Predicates over Large Document Collections](https://github.com/Seurgul/ScaleDoc)（SIGMOD 2026）
+- [Oasis - Towards Online Adaptive LLM-based Semantic Filtering](https://arxiv.org/abs/2611.24518)（arXiv 2026）
 - [ScaleLLM - ScaleLLM: A Technique for Scalable LLM-augmented Data Systems](https://2025.sigmod.org/sigmod_demo_papers.shtml)（SIGMOD Companion 2025；Demo）
 - [TaskCascades - Task Cascades for Efficient Unstructured Data Processing](https://arxiv.org/abs/2601.05536)（SIGMOD 2026）
 - [BARGAIN - Cut Costs, Not Accuracy: LLM-Powered Data Processing with Guarantees](https://arxiv.org/abs/2509.02896)（SIGMOD 2026；集成于：DocETL）
@@ -81,6 +82,7 @@ Semantic Operators](https://arxiv.org/pdf/2610.16035v1) (arXiv 261012)
 - [LROBench - Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis](https://arxiv.org/abs/2603.02537)（arXiv 2026）
 - [SemBench - SemBench: A Benchmark for Semantic Query Processing Engines](https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf)（PVLDB 2026）[Code](https://github.com/SemBench/SemBench/tree/main)[Web](https://sembench.github.io/SemBench/?utm_source=chatgpt.com)
 - [Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing](https://arxiv.org/pdf/2610.13823v1) (arXiv 261009)
+- [Cascadeability and the Realization Gap: An Empirical Study of LLM-Powered Semantic Filtering](https://arxiv.org/abs/2611.23898)（arXiv 2026）
 - [TAG - Text2SQL is Not Enough: Unifying AI and Databases with TAG](https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html)（CIDR 2025）
 - [SWAN - Hybrid Querying Over Relational Databases and Large Language Models](https://www.vldb.org/cidrdb/2025/hybrid-querying-over-relational-databases-and-large-language-models.html)（CIDR 2025）
 - [FDABench - FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data](https://fdabench.github.io/)（KDD 2026）
