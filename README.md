@@ -4,12 +4,45 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 
 收录范围：利用 LLM/ML 解释数据内容、执行自然语言谓词或语义转换的查询与分析，包括语义过滤、映射/抽取、连接、排序和聚合，以及关系算子与语义算子的混合执行。技术基础单列，仅保留直接支撑这些方法的代理选择、模型级联、批处理和昂贵谓词优化研究；通用 Text-to-SQL、DBMS 调优、数据发现、NLP 抽取和模型服务不单独收录。
 
+## 分类目录
+
+* [综述](#paper-surveys)
+* [1. 通用语义算子与端到端系统](#systems-and-operators)
+  * [1.1 语义查询引擎与混合分析](#query-engines)
+  * [1.2 自然语言规划与分析流水线](#language-planning)
+  * [1.3 文档抽取与数据整理](#document-extraction)
+  * [1.4 交互与系统演示](#interaction-and-demos)
+* [2. 语义查询优化](#query-optimization)
+  * [2.1 计划生成、重写与代价—质量优化](#plan-optimization)
+  * [2.2 基数与选择率估计](#cardinality-estimation)
+  * [2.3 跨查询复用与语义视图](#query-reuse)
+* [3. 语义算子实现与执行加速](#operator-execution)
+  * [3.1 语义过滤与模型级联](#semantic-filtering)
+  * [3.2 语义连接](#semantic-joins)
+  * [3.3 语义排序与聚合](#semantic-sorting-and-aggregation)
+  * [3.4 跨算子执行、编译与批处理](#cross-operator-execution)
+* [4. 基准测试与实证评测](#benchmarks)
+  * [4.1 语义算子与查询引擎](#operator-benchmarks)
+  * [4.2 混合查询与异构数据分析](#hybrid-query-benchmarks)
+* [5. 流式语义处理](#streaming)
+* [6. 可靠性、约束与溯源](#reliability)
+* [7. 技术基础与研究展望](#foundations)
+  * [7.1 代理选择、模型级联与批处理](#proxies-and-batching)
+  * [7.2 昂贵谓词与用户自定义函数优化](#expensive-predicates)
+  * [7.3 研究展望与扩展方向](#research-perspectives)
+
+<a name="paper-surveys"></a>
+
 ## Surveys
 
 - [Semantic Data Processing with Large Language Models: A Survey](https://www.preprints.org/manuscript/202608.1168)（Preprints.org 2026；Survey；Semantic Data Processing）
 - [A Survey of LLM-Powered Question Answering Through the Lens of Query Processing](https://www.preprints.org/manuscript/202606.1165)（Preprints.org 2026；Survey；Query Processing & Planning）
 
+<a name="systems-and-operators"></a>
+
 ## 1. 通用语义算子与端到端系统（Systems & Operators）
+
+<a name="query-engines"></a>
 
 ### 1.1 语义查询引擎与混合分析
 
@@ -39,6 +72,8 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [KathDB - KathDB: Explainable Multimodal Database Management System with Human-AI Collaboration](https://www.vldb.org/cidrdb/2026/kathdb-explainable-multimodal-database-management-system-with-human-ai-collaboration.html)（CIDR 2026）
 - [Meta Engine - Beyond Single-Modal Analytics: A Framework for Integrating Heterogeneous LLM-Based Query Systems for Multi-Modal Data](https://arxiv.org/abs/2602.01701)（arXiv 2026）
 
+<a name="language-planning"></a>
+
 ### 1.2 自然语言规划与分析流水线
 
 - [AOP - AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries](https://vldb.org/cidrdb/2025/aop-automated-and-interactive-llm-pipeline-orchestration-for-answering-complex-queries.html)（CIDR 2025）
@@ -47,11 +82,15 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [AgenticData - AgenticData: An Agentic Data Analytics System for Heterogeneous Data](https://arxiv.org/abs/2508.05002)（arXiv 2025）
 - [AgenticScholar - AgenticScholar: Agentic Data Management with Pipeline Orchestration for Scholarly Corpora](https://arxiv.org/abs/2603.13774)（SIGMOD 2026）
 
+<a name="document-extraction"></a>
+
 ### 1.3 文档抽取与数据整理
 
 - [Evaporate - Language Models Enable Simple Systems for Generating Structured Views of Heterogeneous Data Lakes](https://www.vldb.org/pvldb/vol17/p92-arora.pdf)（PVLDB 2023；VLDB 2024）
 - [SEED - SEED: Domain-specific data curation with large language models](https://arxiv.org/abs/2310.00749)（arXiv 2023）
 - [Doctopus - Doctopus: Budget-aware Structural Table Extraction from Unstructured Documents](https://www.vldb.org/pvldb/vol18/p3695-chai.pdf)（PVLDB 2025）
+
+<a name="interaction-and-demos"></a>
 
 ### 1.4 交互与系统演示
 
@@ -59,7 +98,11 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [PalimpChat - PalimpChat: Declarative and Interactive AI analytics](https://arxiv.org/abs/2502.03368)（SIGMOD Companion 2025；Demo；基于：Palimpzest）
 - [DocDB - DocDB: A Database for Unstructured Document Analysis](https://www.vldb.org/pvldb/vol18/p5387-chai.pdf)（PVLDB 2025；Demo；相关系统：QUEST）
 
+<a name="query-optimization"></a>
+
 ## 2. 语义查询优化（Semantic Query Optimization）
+
+<a name="plan-optimization"></a>
 
 ### 2.1 计划生成、重写与代价—质量优化
 
@@ -78,10 +121,14 @@ A curated list of research papers on LLM-powered semantic data processing: syste
   - [CADENZA in Action - Breaking the Monolith with Intent-Dependent Plan Spaces for Semantic Queries](https://arxiv.org/abs/2607.01468)（VLDB 2026；Demo；基于：CADENZA）
 - [NL2Pipe - Bridge the Last-Mile Gap to Semantic Analytics: Compiling Natural-Language Queries into Semantic Operator Pipelines](https://arxiv.org/abs/2606.04641)（arXiv 2026）
 
+<a name="cardinality-estimation"></a>
+
 ### 2.2 基数与选择率估计
 
 - [SemStats - Bridging the Gap: Cardinality Estimation for Semantic Queries on Unstructured Data](https://doi.org/10.1145/3802024)（SIGMOD 2026）
 - [Selectivity Estimation for Semantic Filters on Image Data](https://arxiv.org/abs/2606.04610)（arXiv 2026）
+
+<a name="query-reuse"></a>
 
 ### 2.3 跨查询复用与语义视图
 
@@ -90,7 +137,11 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [SemReuse: Certified Reuse of Cached Natural-Language Views for Semantic Operators](https://arxiv.org/abs/2610.16035)（arXiv 2026）
 - [OCTOPUS - OCTOPUS: Towards A Tag Model for Cross-Query Reuse in Semantic Query Processing](https://arxiv.org/abs/2610.32586)（arXiv 2026）
 
+<a name="operator-execution"></a>
+
 ## 3. 语义算子实现与执行加速（Operator Implementation & Execution）
+
+<a name="semantic-filtering"></a>
 
 ### 3.1 语义过滤与模型级联
 
@@ -105,12 +156,16 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [SUPG-IT and GAMCAL - Streaming Model Cascades for Semantic SQL](https://arxiv.org/abs/2604.00660)（arXiv 2026）
 - [CSV - Beyond Linear LLM Invocation: An Efficient and Effective Semantic Filter Paradigm](https://arxiv.org/abs/2603.04799)（arXiv 2026）
 
+<a name="semantic-joins"></a>
+
 ### 3.2 语义连接
 
 - [FDJ - Featurized-Decomposition Join: Low-Cost Semantic Joins with Guarantees](https://www.vldb.org/pvldb/vol19/p3048-zeighami.pdf)（PVLDB 2026）
 - [Implementing Semantic Join Operators Efficiently](https://arxiv.org/abs/2510.08489)（arXiv 2025）
 - [JoinML - Accelerating Approximate Analytical Join Queries over Unstructured Data with Statistical Guarantees](https://arxiv.org/abs/2603.16153)（SIGMOD 2026）
 - [SemJoin - SemJoin: Semantic Join Optimization](https://arxiv.org/abs/2606.29532)（NOVAS @ VLDB 2026；Workshop）
+
+<a name="semantic-sorting-and-aggregation"></a>
 
 ### 3.3 语义排序与聚合
 
@@ -119,6 +174,8 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [TBS - Efficient Semantic ORDER BY via Transitivity-Aware LLM Batch Sorting](https://arxiv.org/abs/2611.32073)（arXiv 2026）
 - [OLLA - LLM-Driven Online Aggregation for Unstructured Text Analytics](https://arxiv.org/abs/2603.08443)（arXiv 2026）
 
+<a name="cross-operator-execution"></a>
+
 ### 3.4 跨算子执行、编译与批处理
 
 - [HoldUp - Semantic Data Processing with Holistic Data Understanding](https://arxiv.org/abs/2604.02655)（arXiv 2026）
@@ -126,7 +183,11 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [Low-Latency Semantic Processing with Optimal Prompt-Level Batching](https://github.com/joycequu/prompt-level-batching)（NOVAS @ VLDB 2026；Workshop；链接为项目仓库）
 - [Kalypso - Kalypso: Relational LLM Serving](https://arxiv.org/abs/2607.23815)（arXiv 2026）
 
+<a name="benchmarks"></a>
+
 ## 4. 基准测试与实证评测（Benchmarks & Empirical Studies）
+
+<a name="operator-benchmarks"></a>
 
 ### 4.1 语义算子与查询引擎
 
@@ -137,6 +198,8 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [Cascadeability and the Realization Gap: An Empirical Study of LLM-Powered Semantic Filtering](https://arxiv.org/abs/2611.23898)（arXiv 2026）
 - [SemCEB - SemCEB: A Cardinality Estimation Benchmark for Semantic Operators](https://arxiv.org/abs/2606.23081)（NOVAS @ VLDB 2026）
 
+<a name="hybrid-query-benchmarks"></a>
+
 ### 4.2 混合查询与异构数据分析
 
 覆盖关系数据、模型知识或非结构化数据的联合分析；与语义算子专用基准区分列出。
@@ -146,10 +209,14 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [HyQBench - Automating End-to-End Hybrid Query Processing: Benchmark, Solution, and Insights](https://dl.acm.org/doi/epdf/10.1145/3770855.3817487)（SIGKDD 2026）
 - [FDABench - FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data](https://fdabench.github.io/)（KDD 2026）
 
+<a name="streaming"></a>
+
 ## 5. 流式语义处理（Streaming Semantic Processing）
 
 - [CPs - Continuous Prompts: LLM-Augmented Pipeline Processing over Unstructured Streams](https://arxiv.org/abs/2512.03389)（arXiv 2025）
 - [VectraFlow - VectraFlow: Long-Horizon Semantic Processing over Data and Event Streams with LLMs](https://arxiv.org/abs/2604.03855)（arXiv 2026）
+
+<a name="reliability"></a>
 
 ## 6. 可靠性、约束与溯源（Reliability, Constraints & Provenance）
 
@@ -157,7 +224,11 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [ReDD - Relational Deep Dive: Error-Aware Queries Over Unstructured Data](https://doi.org/10.14778/3811243.3811256)（PVLDB 2026）
 - [Evergreen - Evergreen: Efficient Claim Verification for Semantic Aggregates](https://arxiv.org/abs/2604.26180)（arXiv 2026）
 
+<a name="foundations"></a>
+
 ## 7. 技术基础与研究展望（Foundations & Perspectives）
+
+<a name="proxies-and-batching"></a>
 
 ### 7.1 代理选择、模型级联与批处理
 
@@ -170,6 +241,8 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [Batch prompting: Efficient inference with large language model apis](https://aclanthology.org/2023.emnlp-industry.74/)（EMNLP Industry 2023）
 - [BatchPrompt - Batchprompt: Accomplish more with less](https://proceedings.iclr.cc/paper_files/paper/2024/hash/5d8c01de2dc698c54201c1c7d0b86974-Abstract-Conference.html)（ICLR 2024）
 
+<a name="expensive-predicates"></a>
+
 ### 7.2 昂贵谓词与用户自定义函数优化
 
 传统数据库中有关昂贵谓词的研究，为语义谓词的放置、重排和代价估计提供基础。
@@ -178,6 +251,8 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 - [Optimization of queries with user-defined predicates](https://doi.org/10.1145/320248.320249)（TODS 1999）
 - [Bypass Processing - Optimizing disjunctive queries with expensive predicates](https://doi.org/10.1145/191843.191906)（SIGMOD 1994）
 - [Cost estimation of user-defined methods in object-relational database systems](https://dblp.org/rec/journals/sigmod/BoulosO99)（SIGMOD Record 1999）
+
+<a name="research-perspectives"></a>
 
 ### 7.3 研究展望与扩展方向
 
