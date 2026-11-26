@@ -116,6 +116,7 @@ A curated list of research papers on LLM-powered semantic data processing: syste
 
 - [Access Paths for Efficient Ordering with Large Language Models](https://arxiv.org/abs/2509.00303)（arXiv 2025）
 - [ListK - ListK: Semantic ORDER BY and LIMIT K with Listwise Prompting](https://arxiv.org/abs/2603.17223)（arXiv 2026）
+- [TBS - Efficient Semantic ORDER BY via Transitivity-Aware LLM Batch Sorting](https://arxiv.org/abs/2611.32073)（arXiv 2026）
 - [OLLA - LLM-Driven Online Aggregation for Unstructured Text Analytics](https://arxiv.org/abs/2603.08443)（arXiv 2026）
 
 ### 3.4 跨算子执行、编译与批处理
